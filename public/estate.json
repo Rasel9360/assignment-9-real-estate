@@ -1,0 +1,101 @@
+[
+    {
+        "id": 1,
+        "estate_title": "Cozy Townhouse in Suburbia",
+        "segment_name": "Residential",
+        "description": "A charming townhouse located in a peaceful suburban neighborhood. Perfect for small families or individuals seeking a quiet retreat.",
+        "price": "$300,000",
+        "status": "sale",
+        "area": "1,500 sq ft",
+        "location": "Suburbia, City X",
+        "facilities": [
+            "3 bedrooms",
+            "2 bathrooms",
+            "backyard garden"
+        ],
+        "image": "https://i.ibb.co/sghx6vY/e1.png"
+    },
+    {
+        "id": 2,
+        "estate_title": "Luxury Apartment with Stunning Views",
+        "segment_name": "Residential",
+        "description": "Experience luxury living in this spacious apartment offering breathtaking views of the city skyline. Ideal for urban dwellers seeking sophistication and comfort.",
+        "price": "$1,200,000",
+        "status": "sale",
+        "area": "2,000 sq ft",
+        "location": "Downtown, City Y",
+        "facilities": [
+            "2 bedrooms",
+            "2.5 bathrooms",
+            "balcony",
+            "gym",
+            "pool"
+        ],
+        "image": "https://i.ibb.co/DLntVZc/e2.jpg"
+    },
+    {
+        "id": 3,
+        "estate_title": "Student Housing Near University",
+        "segment_name": "Residential",
+        "description": "Conveniently located student housing just steps away from the university campus. Fully furnished and equipped with modern amenities.",
+        "price": "$800/month",
+        "status": "rent",
+        "area": "800 sq ft",
+        "location": "University District, City Z",
+        "facilities": [
+            "studio apartment",
+            "study area",
+            "laundry facilities"
+        ],
+        "image": "https://i.ibb.co/bXhrYHP/e3.jpg"
+    },
+    {
+        "id": 4,
+        "estate_title": "Senior Living Community - Tranquil Retirement",
+        "segment_name": "Residential",
+        "description": "A peaceful senior living community offering comfortable accommodations and a range of activities for a fulfilling retirement lifestyle.",
+        "price": "Contact for Pricing",
+        "status": "sale",
+        "area": "Varies",
+        "location": "Senior Living Community, City W",
+        "facilities": [
+            "1-2 bedroom apartments",
+            "community center",
+            "landscaped gardens"
+        ],
+        "image": "https://i.ibb.co/TkTFJLR/e4.jpg"
+    },
+    {
+        "id": 5,
+        "estate_title": "Family-Friendly Single-Family Home",
+        "segment_name": "Residential",
+        "description": "Spacious single-family home perfect for families, featuring a large backyard and ample living space. Located in a quiet residential neighborhood.",
+        "price": "$400,000",
+        "status": "sale",
+        "area": "2,500 sq ft",
+        "location": "Suburban Neighborhood, City X",
+        "facilities": [
+            "4 bedrooms",
+            "3 bathrooms",
+            "backyard",
+            "garage"
+        ],
+        "image": "https://i.ibb.co/GPjnFyY/e5.jpg"
+    },
+    {
+        "id": 6,
+        "estate_title": "Modern Downtown Loft",
+        "segment_name": "Residential",
+        "description": "Sleek and stylish loft apartment located in the heart of downtown. Ideal for young professionals or couples looking for urban living with a contemporary edge.",
+        "price": "$900,000",
+        "status": "sale",
+        "area": "1,200 sq ft",
+        "location": "Downtown, City Y",
+        "facilities": [
+            "open floor plan",
+            "high ceilings",
+            "modern kitchen"
+        ],
+        "image": "https://i.ibb.co/yYj4SSJ/e6.jpg"
+    }
+]
