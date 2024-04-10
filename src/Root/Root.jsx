@@ -3,7 +3,7 @@ import Navbar from "../Pages/Navbar/Navbar";
 const Root = () => {
     return (
         <div >
-            <Navbar></Navbar>
+            <div className="h-[68px]"><Navbar></Navbar></div>
             <div className="">
                 <Outlet></Outlet>
             </div>
