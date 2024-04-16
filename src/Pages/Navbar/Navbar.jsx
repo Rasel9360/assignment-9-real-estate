@@ -1,6 +1,21 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { toast } from 'react-toastify';
+import { CiLogout } from "react-icons/ci";
+
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleSignOut = () => {
+        logOut()
+            .then(result => {
+                console.log(result)
+                toast.success("Logged out successfully!")
+            })
+            .catch(err => console.error(err));
+    }
 
     const navLinks = <>
         <li><NavLink to='/' className={'text-sm font-bold'}>Home</NavLink></li>
@@ -25,18 +40,22 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <div className="dropdown dropdown-end">
-                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                        <div className="w-10 rounded-full">
-                            <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                        </div>
-                    </div>
-                    <ul tabIndex={0} className=" z-[1] shadow menu menu-sm dropdown-content bg-base-100 rounded-lg ">
-                        <li><a>Name</a></li>
-                        <li><a>Logout</a></li>
-                    </ul>
-                </div>
-                <a className="btn">Button</a>
+                {
+                    user ?
+                        <div className="dropdown dropdown-end">
+                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                <div className="w-10 rounded-full">
+                                    <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
+                                </div>
+                            </div>
+                            <ul tabIndex={0} className=" z-[1] shadow menu  dropdown-content bg-base-100 rounded-lg ">
+                                <li><a>{user.displayName}</a></li>
+                                <li onClick={handleSignOut}><a><CiLogout /> Logout</a></li>
+                            </ul>
+                        </div> :
+                        <Link to='/login'><button className="btn text-white text-xl bg-[#696CFF] hover:bg-[#4043f5]">Login</button></Link>
+                }
+
             </div>
         </div>
     );
