@@ -16,7 +16,7 @@ const Router = createBrowserRouter([
         {
           path: '/cart/:id',
           element: <ProDetails></ProDetails>,
-          loader: ()=> fetch('estate.json')
+          loader: ()=> fetch('/estate.json')
         }
       ]
     },
