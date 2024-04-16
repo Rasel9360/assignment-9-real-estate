@@ -36,7 +36,9 @@ const Register = () => {
             })
             .catch(err => {
                 console.error(err.message)
+                toast.error("email already used please enter a valid email")
             })
+        e.target.reset();
     }
     return (
         <div className="hero min-h-screen bg-base-200 ">

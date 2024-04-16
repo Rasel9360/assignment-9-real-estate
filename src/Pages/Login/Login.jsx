@@ -1,13 +1,28 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { toast } from 'react-toastify';
+
 
 
 const Login = () => {
+    const { loginUser } = useContext(AuthContext);
 
-    const handleLogin = (e) =>{
+    const handleLogin = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email, password);
+        loginUser(email, password)
+            .then(result => {
+                toast.success('Login successful')
+                console.log(result.user)
+            })
+            .catch((err) => {
+                toast.error('Invalid Email or Password');
+                console.log(err);
+            })
+        e.target.reset();
     }
     return (
         <div className="hero min-h-screen bg-base-200">
