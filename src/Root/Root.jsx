@@ -1,5 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../Pages/Navbar/Navbar";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Root = () => {
     return (
         <div >
@@ -7,6 +9,7 @@ const Root = () => {
             <div className="">
                 <Outlet></Outlet>
             </div>
+            <ToastContainer position="top-center"/>
         </div>
     );
 };

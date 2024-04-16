@@ -15,7 +15,7 @@ const Properties = ({ properties }) => {
                         <h3 className="text-lg font-serif font-bold">Status : {price}</h3>
                     </div>
                     <Link to={`/cart/${id}`}>
-                        <button type="button" className="btn flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 text-gray-900">View Details</button>
+                        <button type="button" className="btn flex items-center justify-center w-full p-3 tracking-wide rounded-md bg-[#696CFF] text-white font-serif font-bold">View Details</button>
                     </Link>
                 </div>
             </div>

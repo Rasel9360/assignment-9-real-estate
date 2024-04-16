@@ -4,6 +4,7 @@ const Navbar = () => {
 
     const navLinks = <>
         <li><NavLink to='/' className={'text-sm font-bold'}>Home</NavLink></li>
+        <li><NavLink to='/login' className={'text-sm font-bold'}>Login</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100 shadow-md px-16 fixed z-10">

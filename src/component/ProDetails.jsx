@@ -49,7 +49,7 @@ const ProDetails = () => {
                     </div>
                 </div>
                 <div className='mt-5'>
-                    <h1 className='text-2xl font-serif font-bold text-orange-500'>Price : {price}$</h1>
+                    <h1 className='text-2xl font-serif font-bold text-orange-500'>Price : {price}</h1>
                 </div>
             </div>
         </div>
