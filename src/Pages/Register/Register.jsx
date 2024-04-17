@@ -67,25 +67,25 @@ const Register = () => {
                 <form onSubmit={handleSignUp} className="card-body">
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Name</span>
+                            <span className="label-text text-lg font-serif">Name</span>
                         </label>
                         <input type="text" name="name" placeholder="Enter Your Name" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Email</span>
+                            <span className="label-text text-lg font-serif">Email</span>
                         </label>
                         <input type="email" name="email" placeholder="Email Address" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Photo URL</span>
+                            <span className="label-text text-lg font-serif">Photo URL</span>
                         </label>
                         <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Password</span>
+                            <span className="label-text text-lg font-serif">Password</span>
                         </label>
                         <input type="password" name="password" placeholder="Password" className="input input-bordered" required />
                     </div>

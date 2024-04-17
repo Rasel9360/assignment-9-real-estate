@@ -1,13 +1,15 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { toast } from 'react-toastify';
 import { Helmet } from "react-helmet-async";
+import { IoEye, IoEyeOff } from "react-icons/io5";
 
 
 
 const Login = () => {
     const { loginUser, gitHubLogin, googleLogin } = useContext(AuthContext);
+    const [showPassword, setShowPassword] = useState(false)
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -65,17 +67,27 @@ const Login = () => {
                 <form onSubmit={handleLogin} className="card-body">
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Email</span>
+                            <span className="label-text text-lg font-serif">Email</span>
                         </label>
                         <input type="email" name="email" placeholder="email" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Password</span>
+                            <span className="label-text text-lg font-serif">Password</span>
                         </label>
-                        <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+                        <div className=" relative">
+                            <input
+                                type={showPassword ? "text" : "password"}
+                                name="password"
+                                placeholder="password"
+                                className="input input-bordered w-full"
+                                required />
+                            <span className="absolute bottom-[35%] right-2" onClick={() => setShowPassword(!showPassword)}>
+                                {showPassword ? <IoEyeOff></IoEyeOff> : <IoEye />}
+                            </span>
+                        </div>
                         <label className="label">
-                            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                            <a href="#" className="label-text-alt link link-hover text-sm font-bold font-serif">Forgot password?</a>
                         </label>
                     </div>
                     <div className="form-control mt-6">

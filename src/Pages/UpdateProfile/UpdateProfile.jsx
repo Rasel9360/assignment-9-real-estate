@@ -3,6 +3,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
     const { user } = useContext(AuthContext)
@@ -28,6 +29,9 @@ const UpdateProfile = () => {
 
     return (
         <div className="min-h-screen flex justify-center items-center bg-base-200">
+            <Helmet>
+                <title>Update Profile</title>
+            </Helmet>
             <div className="lg:flex justify-center gap-10 items-center">
                 <div className="flex lg:min-w-[512px] lg:min-h-[376px] flex-col justify-center p-6 shadow-xl rounded-xl sm:px-12 bg-base-100  dark:text-gray-800">
                     <img src={user.photoURL} alt="" className="w-32 border-2 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square" />
