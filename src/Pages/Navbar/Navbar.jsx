@@ -42,13 +42,13 @@ const Navbar = () => {
             <div className="navbar-end">
                 {
                     user ?
-                        <div className="dropdown dropdown-end">
+                        <div className="dropdown dropdown-end ">
                             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                                <div className="w-10 rounded-full">
+                                <div className="w-10 rounded-full tooltip" title={user?.displayName}>
                                     <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
                                 </div>
                             </div>
-                            <ul tabIndex={0} className=" z-[1] shadow menu  dropdown-content bg-base-100 rounded-lg ">
+                            <ul tabIndex={0} className=" z-[1] shadow menu menu-lg  dropdown-content bg-base-100 rounded-lg ">
                                 <li><a>{user.displayName}</a></li>
                                 <li onClick={handleSignOut}><a><CiLogout /> Logout</a></li>
                             </ul>

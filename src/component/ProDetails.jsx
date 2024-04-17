@@ -10,7 +10,7 @@ const ProDetails = () => {
 
     console.log(idInt, pro)
     return (
-        <div className='w-11/12 mx-auto mt-5 shadow-lg border rounded-lg'>
+        <div className='w-11/12 mx-auto mt-1 shadow-lg border rounded-lg'>
             <div>
                 <img src={image} className='w-full object-cover object-center lg:h-[500px]' alt="" />
             </div>
