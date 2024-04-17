@@ -4,6 +4,9 @@ import { updateProfile } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
 import { toast } from "react-toastify";
 import { Helmet } from "react-helmet-async";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 const UpdateProfile = () => {
     const { user } = useContext(AuthContext)
@@ -33,7 +36,7 @@ const UpdateProfile = () => {
                 <title>Update Profile</title>
             </Helmet>
             <div className="lg:flex justify-center gap-10 items-center">
-                <div className="flex lg:min-w-[512px] lg:min-h-[376px] flex-col justify-center p-6 shadow-xl rounded-xl sm:px-12 bg-base-100  dark:text-gray-800">
+                <div data-aos="fade-right" data-aos-duration="1000" className="flex lg:min-w-[512px] lg:min-h-[376px] flex-col justify-center p-6 shadow-xl rounded-xl sm:px-12 bg-base-100  dark:text-gray-800">
                     <img src={user.photoURL} alt="" className="w-32 border-2 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square" />
                     <div className="space-y-4 text-center divide-y dark:divide-gray-300">
                         <div className="my-2 space-y-1">
@@ -42,7 +45,7 @@ const UpdateProfile = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card shrink-0 w-full max-w-lg shadow-xl bg-base-100 ">
+                <div data-aos="fade-left" data-aos-duration="1000" className="card shrink-0 w-full max-w-lg shadow-xl bg-base-100 ">
                     <h1 className="text-3xl text-black mt-5 font-serif text-center font-bold">Update Your Profile</h1>
                     <form onSubmit={handleUpdate} className="card-body">
                         <div className="form-control">

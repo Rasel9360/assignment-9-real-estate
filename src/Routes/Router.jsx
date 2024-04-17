@@ -8,6 +8,7 @@ import Register from "../Pages/Register/Register";
 import PrivateRouter from "./PrivateRouter";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import Contact from "../Pages/Contact/Contact";
+import Blogs from "../Pages/Blogs/Blogs";
 
 const Router = createBrowserRouter([
   {
@@ -31,7 +32,7 @@ const Router = createBrowserRouter([
       },
       {
         path: '/contact',
-        element: <PrivateRouter><Contact></Contact></PrivateRouter>
+        element: <Contact></Contact>
       },
       {
         path: '/login',
@@ -40,6 +41,11 @@ const Router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/blogs',
+        element: <PrivateRouter><Blogs></Blogs></PrivateRouter>,
+        loader: () => fetch('/blog.json')
       }
     ]
   },

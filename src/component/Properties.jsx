@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 
+
 const Properties = ({ properties }) => {
-    const {id, image, estate_title, price, status } = properties;
+    const { id, image, estate_title, price, status } = properties;
     return (
         <div>
             <div className="rounded-md shadow-lg border mb-10">
