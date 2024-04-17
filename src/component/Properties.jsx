@@ -4,7 +4,7 @@ const Properties = ({ properties }) => {
     const {id, image, estate_title, price, status } = properties;
     return (
         <div>
-            <div className="rounded-md shadow-lg border">
+            <div className="rounded-md shadow-lg border mb-10">
                 <img src={image} alt="" className="object-cover object-center w-full rounded-t-md h-80" />
                 <div className="flex flex-col justify-between p-6 space-y-8">
                     <div className="space-y-2">

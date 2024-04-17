@@ -1,11 +1,15 @@
 import Banner from "../../component/Banner";
 import { useLoaderData } from "react-router-dom";
 import Properties from "../../component/Properties";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
     const properties = useLoaderData();
     return (
         <div>
+            <Helmet>
+                <title>NR Holding - Home</title>
+            </Helmet>
             <Banner></Banner>
             <h1 className="text-2xl mt-10 lg:text-4xl text-center font-bold font-serif">Display Latest & Featured Properties
             </h1>

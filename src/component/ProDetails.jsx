@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useParams, useLoaderData } from 'react-router-dom';
 
 const ProDetails = () => {
@@ -11,6 +12,9 @@ const ProDetails = () => {
     console.log(idInt, pro)
     return (
         <div className='w-11/12 mx-auto mt-1 shadow-lg border rounded-lg'>
+            <Helmet>
+                <title>Property Details</title>
+            </Helmet>
             <div>
                 <img src={image} className='w-full object-cover object-center lg:h-[500px]' alt="" />
             </div>

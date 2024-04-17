@@ -6,6 +6,8 @@ import Login from "../Pages/Login/Login";
 import Error from "../ErrorPage/Error";
 import Register from "../Pages/Register/Register";
 import PrivateRouter from "./PrivateRouter";
+import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
+import Contact from "../Pages/Contact/Contact";
 
 const Router = createBrowserRouter([
   {
@@ -22,6 +24,14 @@ const Router = createBrowserRouter([
         path: '/cart/:id',
         element: <PrivateRouter><ProDetails></ProDetails></PrivateRouter>,
         loader: () => fetch('/estate.json')
+      },
+      {
+        path: '/profile',
+        element: <PrivateRouter><UpdateProfile></UpdateProfile></PrivateRouter>
+      },
+      {
+        path: '/contact',
+        element: <PrivateRouter><Contact></Contact></PrivateRouter>
       },
       {
         path: '/login',

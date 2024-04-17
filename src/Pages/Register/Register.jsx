@@ -4,10 +4,11 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
 import { toast } from 'react-toastify';
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext)
+    const { createUser, logOut } = useContext(AuthContext)
 
     const handleSignUp = (e) => {
         e.preventDefault();
@@ -16,6 +17,19 @@ const Register = () => {
         const name = e.target.name.value;
         const photo = e.target.photo.value;
         console.log(email, password, name, photo);
+
+        // Password verification
+        if (password.length < 6) {
+            return toast.error('Password use must be 6 character')
+        }
+
+        if (/^(?=.*[A-Z])/gm.test(password) === false) {
+            return toast.error("Uppercase letter is required")
+        }
+
+        if (/^(?=.*[a-z])/gm.test(password) === false) {
+            return toast.error("Lowercase letter is required")
+        }
 
 
         createUser(email, password)
@@ -27,11 +41,14 @@ const Register = () => {
                     .then(result => {
                         console.log(result)
                         toast.success("Account created successfully!");
+                        logOut()
+                            .then(result => {
+                                console.log(result)
+                            })
+                            .catch(err => console.error(err));
                     })
                     .catch((error) => console.error(error.message));
                 console.log(result.user)
-
-
 
             })
             .catch(err => {
@@ -42,6 +59,9 @@ const Register = () => {
     }
     return (
         <div className="hero min-h-screen bg-base-200 ">
+            <Helmet>
+                <title>Sign Up</title>
+            </Helmet>
             <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100 ">
                 <h1 className="text-3xl text-black mt-5 font-serif text-center font-bold">Create An Account</h1>
                 <form onSubmit={handleSignUp} className="card-body">

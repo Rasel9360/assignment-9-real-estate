@@ -19,10 +19,11 @@ const Navbar = () => {
 
     const navLinks = <>
         <li><NavLink to='/' className={'text-sm font-bold'}>Home</NavLink></li>
-        <li><NavLink to='/login' className={'text-sm font-bold'}>Login</NavLink></li>
+        <li><NavLink to='/profile' className={'text-sm font-bold'}>Update Profile</NavLink></li>
+        <li><NavLink to='/contact' className={'text-sm font-bold'}>Contact</NavLink></li>
     </>
     return (
-        <div className="navbar bg-base-100 shadow-md px-16 fixed z-10">
+        <div className="navbar bg-base-100 shadow-md lg:px-16 fixed z-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

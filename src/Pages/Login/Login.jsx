@@ -1,12 +1,16 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { toast } from 'react-toastify';
+import { Helmet } from "react-helmet-async";
 
 
 
 const Login = () => {
     const { loginUser, gitHubLogin, googleLogin } = useContext(AuthContext);
+
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -15,6 +19,7 @@ const Login = () => {
         console.log(email, password);
         loginUser(email, password)
             .then(result => {
+                navigate(location?.state ? location.state : '/')
                 toast.success('Login successful')
                 console.log(result.user)
             })
@@ -28,6 +33,7 @@ const Login = () => {
     const handleGitHub = () => {
         gitHubLogin()
             .then(res => {
+                navigate(location?.state ? location.state : '/')
                 toast.success('Login with GitHub successfully');
                 console.log(res.user);
             })
@@ -39,6 +45,7 @@ const Login = () => {
     const handleGoogle = () => {
         googleLogin()
             .then(res => {
+                navigate(location?.state ? location.state : '/')
                 toast.success('Login with Google successfully');
                 console.log(res.user);
             })
@@ -50,6 +57,9 @@ const Login = () => {
 
     return (
         <div className="hero min-h-screen bg-base-200">
+            <Helmet>
+                <title>Login Page</title>
+            </Helmet>
             <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
                 <h1 className="text-3xl text-black mt-5 font-serif text-center font-bold">Please Login</h1>
                 <form onSubmit={handleLogin} className="card-body">
