@@ -9,7 +9,7 @@ const PrivateRouter = ({children}) => {
     console.log(location)
 
     if(loading){
-        return  <div className="flex justify-center items-center mt-28"><span className="loading loading-bars loading-lg text-[#696CFF]"></span></div>
+        return  <div className="flex min-h-screen justify-center items-center mt-28"><span className="loading loading-bars loading-lg text-[#696CFF]"></span></div>
     }
 
     if(user){

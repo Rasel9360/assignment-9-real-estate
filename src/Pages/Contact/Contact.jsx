@@ -1,8 +1,13 @@
 import { Helmet } from "react-helmet-async";
-import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
+import { icon } from "leaflet";
 
 const Contact = () => {
+    const costomIcon = new icon ({
+        iconUrl: "https://cdn-icons-png.flaticon.com/512/535/535137.png",
+        iconSize: [38, 38]
+    })
     return (
         <div className="my-10 w-11/12 mx-auto">
             <Helmet>
@@ -62,7 +67,7 @@ const Contact = () => {
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
-                    <Marker position={[23.74677698103868, 90.38056989560032]}>
+                    <Marker position={[23.74677698103868, 90.38056989560032]} icon={costomIcon} >
                         <Popup>
                             NR Holding
                         </Popup>

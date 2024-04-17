@@ -1,6 +1,6 @@
 # NR Holding
 
- Visit us at [www.realestatehub.com](https://www.realestatehub.com)
+ Visit us at [https://nr-holding.web.app](https://nr-holding.web.app)
 
 ## Features and Characteristics
 
