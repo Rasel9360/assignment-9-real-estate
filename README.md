@@ -10,4 +10,21 @@
 - **Responsive Design: Enjoy a seamless experience across devices of all sizes.
 - **User-Friendly Interface:** Enjoy a seamless browsing experience with our user-friendly interface designed to make your real estate journey smooth and enjoyable.
 
+## Technology Used
+
+- React.js
+- React Router
+- Tailwind CSS
+- React Icons
+- React Tost
+- Firebase
+- Daisy Ui
+- React AOS Package
+- React-leaflet
+- Swiper slider
+- Mumba Ui
+
+
+
+
 Feel free to explore our website and discover the endless possibilities in the world of real estate!
