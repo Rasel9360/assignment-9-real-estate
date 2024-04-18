@@ -13,7 +13,7 @@ const UpdateProfile = () => {
 
 
     const handleUpdate = (e) => {
-        e.preventDefault();
+        // e.preventDefault();  
         const name = e.target.name.value;
         const photo = e.target.photo.value;
         updateProfile(auth.currentUser, {
@@ -52,13 +52,13 @@ const UpdateProfile = () => {
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
-                            <input type="text" name="name" placeholder="Enter Your Name" className="input input-bordered" />
+                            <input type="text" name="name" placeholder="Enter Your Name" className="input input-bordered"  required/>
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Photo URL</span>
                             </label>
-                            <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered" />
+                            <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered" required/>
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn text-white text-xl bg-[#696CFF] hover:bg-[#4043f5]">Save Change</button>
